@@ -1,4 +1,6 @@
-const input = require('./chronalCalibration.input.js');
+const { readInputFile } = require('../utils/fileReader');
 
-const result = input.reduce((acc, change) => acc + change, 0);
+const input = readInputFile('./chronalCalibration.input.txt');
+
+const result = input.reduce((acc, change) => acc + Number(change), 0);
 console.log(`solution = ${result}`);
