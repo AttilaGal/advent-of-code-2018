@@ -2,8 +2,9 @@ const { readInputFile } = require('../utils/fileReader');
 
 const input = readInputFile('./chronalCalibration.input.txt');
 
-const result = input.reduce((acc, change) => acc + Number(change), 0);
-console.log(`PART 1: solution = ${result}`);
+function partOne() {
+  return input.reduce((acc, change) => acc + Number(change), 0);
+}
 
 function partTwo() {
   const foundFrequencies = new Set([0]);
@@ -20,5 +21,5 @@ function partTwo() {
   }
 }
 
-const resultPartTwo = partTwo();
-console.log(`PART 2: solution = ${resultPartTwo}`);
+console.log(`PART 1: solution = ${partOne()}`);
+console.log(`PART 2: solution = ${partTwo()}`);
