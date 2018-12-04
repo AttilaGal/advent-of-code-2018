@@ -1,0 +1,25 @@
+{
+  "name": "advent-of-code-2018",
+  "version": "1.0.0",
+  "description": "My solutions for https://adventofcode.com/2018",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AttilaGal/advent-of-code-2018.git"
+  },
+  "author": "Attila Gal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AttilaGal/advent-of-code-2018/issues"
+  },
+  "homepage": "https://github.com/AttilaGal/advent-of-code-2018#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
+  "jest": {
+    "verbose": true
+  }
+}
