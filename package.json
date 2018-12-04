@@ -20,6 +20,7 @@
     "jest": "^23.6.0"
   },
   "jest": {
-    "verbose": true
+    "verbose": true,
+    "testEnvironment": "node"
   }
 }
