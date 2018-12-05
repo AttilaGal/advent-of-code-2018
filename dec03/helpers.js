@@ -21,6 +21,14 @@ function inputToClaim(input, clothWidth, clothHeight) {
   return claim;
 }
 
+function inputToClaimWithId(input, clothWidth, clothHeight) {
+  const id = input.split(' ')[0];
+  return {
+    id,
+    pattern: inputToClaim(input, clothWidth, clothHeight)
+  };
+}
+
 function joinClaims(claimA, claimB) {
   const claimUpdate = [...claimA];
   for (let i = 0; i < claimA.length; ++i) {
@@ -32,7 +40,20 @@ function joinClaims(claimA, claimB) {
   return claimUpdate;
 }
 
+function isPatternStandAlone(bundled, pattern) {
+  for (let row = 0; row < pattern.length; row++) {
+    for (let column = 0; column < pattern[row].length; column++) {
+      if(pattern[row][column] && bundled[row][column] > 1) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
 module.exports = {
   inputToClaim,
   joinClaims,
+  inputToClaimWithId,
+  isPatternStandAlone,
 };
